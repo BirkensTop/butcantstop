@@ -15,14 +15,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LoginSignup">
+        <activity android:name=".MainPage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainPage"/>
+        </activity><!--
+        <activity android:name=".MainPage"/>-->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyC17SQS9j6KC19jiVx3q2gCOU_xBDxX1Eg"/>

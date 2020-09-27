@@ -51,7 +51,6 @@ public class CommuFragment extends Fragment {
         }
 
         editText = layout_commu.findViewById(R.id.editText);
-        editText.setText("1");
 // Add a new document with a generated ID
         db.collection("체육시설데이터")
                 .whereLessThan("num", 10)
@@ -59,15 +58,13 @@ public class CommuFragment extends Fragment {
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        editText.setText("2");
                         if (task.isSuccessful()) {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 String message = document.getId() + " => " + document.getData();
-                                editText.setText("hi");
+                                editText.setText(message);
                         }
                         } else {
                             Log.d(TAG, "Error getting documents: ", task.getException());
-                            editText.setText("4");
                         }
                     }
                 });
